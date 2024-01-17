@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>My Portfolio</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,600');
+
+body {
+  background-image: url('https://wallpapercave.com/wp/wp9897746.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #000000f3;
+  padding: 50px 0;
+  color: #fff;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.nav {
+  font-family: 'Titillium Web';
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.nav * {
+  box-sizing: border-box;
+  transition: all .35s ease;
+}
+
+.nav li {
+  display: inline-block;
+  list-style: outside none none;
+  margin: .5em 1em;
+  padding: 0;
+}
+
+.nav a {
+  padding: .5em .8em;
+  color: rgba(255,255,255,.5);
+  position: relative;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.nav a::before,
+.nav a::after {
+  content: '';
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  transition: all .35s ease;
+  opacity: 0;
+}
+
+.nav a::before {
+  right: 0;
+  top: 0;
+  border-top: 3px solid #3E8914;
+  border-right: 3px solid #2E640F;
+  transform: translate(-100%, 50%);
+}
+
+.nav a:after {
+  left: 0;
+  bottom: 0;
+  border-bottom: 3px solid #2E640F;
+  border-left: 3px solid #3E8914;
+  transform: translate(100%, -50%);
+}
+
+.nav a:hover:before,
+.nav a:hover:after {
+  transform: translate(0,0);
+  opacity: 1;
+}
+
+.nav a:hover {
+  color: #3DA35D;
+}
+
+section {
+  font-family: 'Titillium Web';  
+  padding: 20px;
+  margin: 200px 0;
+  background: #333;
+  border-radius: 20px;
+}
+
+.Asection {
+  font-family: 'Titillium Web';  
+  padding: 20px;
+  margin-top: 900px;
+  width: 600px;
+  height: 20;
+  background: #333;
+  border-radius: 20px;
+}
+
+/* scroll to top button*/
+#myBtn {
+  display: none;
+  position: fixed;
+  left: 900px;
+  bottom: 50px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #474343d7;
+  color: white;
+  cursor: pointer;
+  width: 50px; /* Set the width and height to create a circle */
+  height: 50px;
+  border-radius: 50%; /* Make it circular */
+  padding: 10px; /* Adjust padding for the arrow */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#myBtn::before {
+  content: '\2191'; /* Unicode arrow character */
+  font-size: 24px; /* Adjust arrow size */
+}
+
+#myBtn:hover {
+  background-color: #b4aaaace;
+}
+
+/*Introduction css text */
+
+@import url(https://fonts.googleapis.com/css?family=Khula:700);
+
+.hidden {
+  opacity:0;
+}
+ 
+.console-container {
+ 
+  font-family:Titillium Web;
+  font-size:4em;
+  text-align:left;
+  height:200px;
+  width:600px;
+  display:block;
+  position:absolute;
+  color:white;
+  top:0;
+  bottom:0;
+  left: -700px;
+  right:0;
+  margin:auto;
+}
+.console-underscore {
+   display:inline-block;
+  position:relative;
+  top:-0.14em;
+  left:10px;
+}
+
+.container {
+  display: flex;
+  align-items: left;
+  justify-content: flex-start;
+}
+
+.Aimage {
+  max-width: 100%;
+  width: 300px;
+  height: 300px;
+}
+
+.text {
+  margin-left: 20px;
+}
+
+.image {
+margin-left: 20px;
+}
+/* logo button links */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+  margin-right: 10px;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+ 
+</style>
+<body>
+    <header>
+      <nav class="nav">
+        <ul>
+          <h1>My Portfolio</h1>  
+          <li><a href="#about" class="nav-link" data-target="about">About Me</a></li>
+          <li><a href="#projects" class="nav-link" data-target="projects">My Projects</a></li>
+          <li><a href="#blog" class="nav-link" data-target="blog">Blog</a></li>
+          <li><a href="#contacts" class="nav-link" data-target="contacts">Contacts</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <div class='console-container'><span id='text'></span>
+        <div class='console-underscore' id='console'>&#95;</div></div>
+  
+        <section id="about" class="Asection">
+            <h2>About Me</h2>
+            <p>This contains information about myself.</p>
+            <br>
+            <div class="container">
+              <img class="Aimage" src="russ.jpg" alt="Your Image">
+              <p class="text">My name is Russel Lopez, and I'm a senior in high school who is passionate about developing websites and mobile apps. Being an introvert, the complex world of design and coding gives me comfort. My technological path has brought me to the exciting fields of web and mobile application development.</p>
+          </div>
+          </section>
+
+          <section id="projects">
+            <h2>My Projects</h2>
+            <p>My projects are listed here.</p>
+            <div class="container">
+              <img class="image" src="https://elms.sti.edu/files/10636713/Projects.PNG?lmsauth=fa893c3be8fb2563bbb64cbe2793884aa876c23d" alt="First Image">
+              <img class="image" src="projectspic.PNG" alt="Second Image">
+          </div>
+          </section>
+        
+          <section id="blog">
+            <h2>Blog</h2>
+            <p>Here are some blog posts.</p>
+            <p>Welcome to TechInsights, your go-to destination for a captivating journey through the ever-evolving landscape of technology. As we delve into the realms of innovation, coding, and the digital future, join me, Russell Lopez, your guide on this tech adventure. From the latest breakthroughs to practical tips and everything in between, TechInsights is your one-stop hub for all things tech-related.<br></br>
+
+              1. Unveiling the Future:<br></br> Top Tech Trends of 2024
+              In our first article, we'll explore the cutting-edge technologies that are shaping the future. From artificial intelligence and<br></br> augmented reality to the Internet of Things, discover how these trends are revolutionizing the way we live, work, and connect.
+              <br></br>
+              2. Coding Chronicles:<br></br> A Journey into Python Programming
+              Embark on a coding odyssey as we unravel the power of Python. Whether you're a seasoned developer or just starting, this article<br></br> will guide you through the basics, advanced features, and real-world applications of one of the most versatile programming languages.
+              <br></br>
+              3. The UX Revolution:<br></br> Crafting Seamless Digital Experiences
+              User experience (UX) is at the forefront of technology design. Dive into the principles of UX and learn how to create engaging<br></br> and user-friendly interfaces. From wireframing to prototyping, discover the secrets to designing digital experiences that leave a lasting impression.
+              <br></br>
+              4. Mastering Mobile App Development:<br></br> A Beginner's Guide
+              Are you fascinated by mobile apps? In this article, we'll break down the essential steps to kickstart your journey into mobile app development.<br></br> From choosing the right platform to understanding the app development life cycle, this guide is your key to turning app ideas into reality.
+              <br></br>
+              5. Tech Gadgets Galore:<br></br> Must-Haves for 2024
+              Explore the latest and greatest tech gadgets that are redefining our daily lives. From smart home devices to wearable tech,<br></br> find out which gadgets are making waves in 2024 and why they should be on your radar.</p>
+          </section>
+        
+          <section id="contacts">
+            <h2>Contacts</h2>
+            <p>My contact information goes here.</p>
+            <a href="https://www.facebook.com/real.lopez.0607/" class="fa fa-facebook"></a>
+            <a href="https://www.youtube.com/@russellopez215/playlists" class="fa fa-youtube"></a>
+          </section>
+        
+
+          <button onclick="topFunction()" id="myBtn" title="Home"></button>
+  
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function() {
+    $("nav a").on("click", function(e) {
+      if (this.hash !== "") {
+        e.preventDefault();
+        const hash = this.hash;
+        $("html, body").animate({
+          scrollTop: $(hash).offset().top
+        }, 800, function(){
+          window.location.hash = hash;
+        });
+      }
+    });
+  });
+  
+// function([string1, string2],target id,[color1,color2])    
+consoleText(['Hello World!', 'Im Russel Lopez', 'From MAWD12-A'], 'text',['tomato','rebeccapurple','lightblue']);
+
+function consoleText(words, id, colors) {
+  if (colors === undefined) colors = ['#fff'];
+  var visible = true;
+  var con = document.getElementById('console');
+  var letterCount = 1;
+  var x = 1;
+  var waiting = false;
+  var target = document.getElementById(id)
+  target.setAttribute('style', 'color:' + colors[0])
+  window.setInterval(function() {
+
+    if (letterCount === 0 && waiting === false) {
+      waiting = true;
+      target.innerHTML = words[0].substring(0, letterCount)
+      window.setTimeout(function() {
+        var usedColor = colors.shift();
+        colors.push(usedColor);
+        var usedWord = words.shift();
+        words.push(usedWord);
+        x = 1;
+        target.setAttribute('style', 'color:' + colors[0])
+        letterCount += x;
+        waiting = false;
+      }, 1000)
+    } else if (letterCount === words[0].length + 1 && waiting === false) {
+      waiting = true;
+      window.setTimeout(function() {
+        x = -1;
+        letterCount += x;
+        waiting = false;
+      }, 1000)
+    } else if (waiting === false) {
+      target.innerHTML = words[0].substring(0, letterCount)
+      letterCount += x;
+    }
+  }, 120)
+  window.setInterval(function() {
+    if (visible === true) {
+      con.className = 'console-underscore hidden'
+      visible = false;
+
+    } else {
+      con.className = 'console-underscore'
+
+      visible = true;
+    }
+  }, 400)
+}
+
+// Get the button
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+$(".hover").mouseleave(
+  function () {
+    $(this).removeClass("hover");
+  }
+);
+    </script>
+  </body>
+  </html>
